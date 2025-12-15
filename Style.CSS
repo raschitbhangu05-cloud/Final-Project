@@ -6,7 +6,7 @@
     }
 body
     {
-        background-image: url(IMG/660790.jpg);
+        background-image: url(660790.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -768,4 +768,5 @@ pre code {
     box-sizing: border-box;
 
     border-radius: 12px;
+
 }
