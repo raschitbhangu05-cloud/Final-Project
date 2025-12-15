@@ -18,7 +18,7 @@
 body
   {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-image: url(../IMG/660790.jpg);
+    background-image: url(660790.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: normal;
@@ -239,3 +239,4 @@ h1
     pointer-events: none;
     will-change: transform, opacity;
   }
+
