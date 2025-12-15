@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>HTML Cheatsheet — Project</title>
+	<link rel="stylesheet" href="Style.CSS">
+</head>
+<body>
+	<main class="resume" aria-labelledby="resume-heading">
+
+		<header class="resume-header">
+			<div class="name-block">
+				<h1 id="resume-heading" class="name">HTML Cheat Sheet</h1>
+				<p class="title">Quick reference — tags, attributes &amp; notes</p>
+			</div>
+
+		</header>
+
+		<div class="resume-body">
+			<aside class="sidebar" aria-label="Cheat navigation and requirements">
+				<section class="section-card">
+					<h2 class="section-title">Cheat Navigation</h2>
+					<nav class="cheat-nav">
+						<a href="index.html">Home</a>
+						<span class="cheat-current" aria-current="page">HTML Cheat Sheet</span>
+						<a href="CSS Cheatsheet.html">CSS Cheat Sheet</a>
+						<a href="JavaScript Cheatsheet.html">JavaScript Cheat Sheet</a>
+					</nav>
+				</section>
+			</aside>
+
+			<section class="content">
+				<section class="section-card">
+					<h2 class="section-title">Key HTML elements &amp; attributes (15+)</h2>
+					<ul class="cheat-list">
+						<li><span class="cheat-term">&lt;!DOCTYPE html&gt;</span><span class="cheat-desc">Defines the HTML5 document type. <em>Example:</em> <code>&lt;!DOCTYPE html&gt;</code>.</span></li>
+						<li><span class="cheat-term">&lt;html&gt; lang</span><span class="cheat-desc">Root element; include <code>lang</code> for accessibility (e.g., <code>&lt;html lang="en"&gt;</code>).</span></li>
+						<li><span class="cheat-term">&lt;head&gt;</span><span class="cheat-desc">Metadata container (charset, viewport, title, links).</span></li>
+						<li><span class="cheat-term">&lt;meta&gt; (charset/viewport)</span><span class="cheat-desc">Essential meta tags, e.g. <code>&lt;meta charset="utf-8"&gt;</code>, <code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code>.</span></li>
+						<li><span class="cheat-term">&lt;title&gt;</span><span class="cheat-desc">Page title shown in browser tabs and search results.</span></li>
+						<li><span class="cheat-term">&lt;link&gt; (stylesheets)</span><span class="cheat-desc">Include stylesheets, e.g. <code>&lt;link rel="stylesheet" href="Style.CSS"&gt;</code>.</span></li>
+						<li><span class="cheat-term">&lt;script&gt;</span><span class="cheat-desc">JS include; prefer <code>defer</code> for external scripts.</span></li>
+						<li><span class="cheat-term">&lt;a&gt; (links)</span><span class="cheat-desc">Anchors for navigation. Use descriptive text and <code>rel="noopener"</code> for external links.</span></li>
+						<li><span class="cheat-term">&lt;img&gt; (alt text)</span><span class="cheat-desc">Must include <code>alt</code> for accessibility: <code>&lt;img src="photo.jpg" alt="Description"&gt;</code>.</span></li>
+						<li><span class="cheat-term">&lt;form&gt; &amp; input types</span><span class="cheat-desc">Collect input. Example: <code>&lt;form&gt;&lt;input type="email" required&gt;&lt;/form&gt;</code>.</span></li>
+						<li><span class="cheat-term">&lt;button&gt; &amp; accessibility</span><span class="cheat-desc">Use real <code>&lt;button&gt;</code> elements with accessible labels.</span></li>
+						<li><span class="cheat-term">Semantic sections</span><span class="cheat-desc">Use <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code> to structure content.</span></li>
+						<li><span class="cheat-term">Headings</span><span class="cheat-desc">Keep logical order (<code>&lt;h1&gt;–&lt;h6&gt;</code>) for outline/accessibility.</span></li>
+						<li><span class="cheat-term">ARIA attributes</span><span class="cheat-desc">Use attributes (e.g., <code>role="status"</code>, <code>aria-live</code>) for dynamic content.</span></li>
+						<li><span class="cheat-term">Data attributes</span><span class="cheat-desc">Use <code>data-*</code> for JS hooks (e.g., <code>&lt;div data-id="123"&gt;</code>).</span></li>
+						<li><span class="cheat-term">Download &amp; target</span><span class="cheat-desc">Use <code>download</code> on anchors for files; <code>target="_blank" rel="noopener"</code> for new tabs.</span></li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Learning notes &amp; resources</h2>
+					<ul>
+						<li>MDN Web Docs (HTML): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a></li>
+					</ul>
+				</section>
+			</section>
+		</div>
+
+	</main>
+
+	<script src="Script.JS"></script>
+</body>
+</html>

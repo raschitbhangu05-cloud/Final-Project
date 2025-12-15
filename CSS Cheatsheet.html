@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="Style.CSS">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>CSS Cheatsheet — Project</title>
+
+</head>
+<body>
+	<main class="resume" aria-labelledby="resume-heading">
+
+		<header class="resume-header">
+			<div class="name-block">
+				<h1 id="resume-heading" class="name">CSS Cheat Sheet</h1>
+				<p class="title">Quick reference — variables, patterns &amp; snippets</p>
+			</div>
+		</header>
+
+		<div class="resume-body">
+			<aside class="sidebar" aria-label="Cheat navigation and requirements">
+				<section class="section-card">
+					<h2 class="section-title">Cheat Navigation</h2>
+					<nav class="cheat-nav">
+						<a href="index.html">Home</a>
+						<a href="HTML Cheatsheet.html">HTML Cheat Sheet</a>
+						<span class="cheat-current" aria-current="page">CSS Cheat Sheet</span>
+						<a href="JavaScript Cheatsheet.html">JavaScript Cheat Sheet</a>
+					</nav>
+				</section>
+			</aside>
+
+			<section class="content">
+				<section class="section-card">
+					<h2 class="section-title">Custom properties (variables)</h2>
+					<ul class="cheat-list">
+						<li><span class="cheat-term">--accent-rgb</span><span class="cheat-desc">RGB triple used for accents and shadows, e.g. <code>rgba(var(--accent-rgb),0.16)</code>.</span></li>
+						<li><span class="cheat-term">--primary-top, --primary-bottom</span><span class="cheat-desc">Theme colors used in gradients, e.g. <code>linear-gradient(180deg, rgba(var(--primary-top),0.9), rgba(var(--primary-bottom),0.8))</code>.</span></li>
+						<li><span class="cheat-term">--p1-color, --p2-color</span><span class="cheat-desc">Player colors used in game discs (red/yellow).</span></li>
+						<li><span class="cheat-term">--cell-size</span><span class="cheat-desc">Board cell sizing (adjust with media queries for small widths).</span></li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Layout &amp; responsive patterns</h2>
+					<ul>
+						<li><strong>Flexbox</strong> for centering and header layouts (<code>display:flex</code>, <code>gap</code>, <code>align-items</code>).</li>
+						<li><strong>CSS Grid</strong> for the board and resume two-column layout (<code>grid-template-columns</code>).</li>
+						<li><strong>Clamp()</strong> for responsive sizes: <code>font-size: clamp(14px, 0.9vw + 12px, 18px)</code>.</li>
+						<li><strong>Media queries</strong> used to reduce <code>--cell-size</code> on small widths.</li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Visual effects</h2>
+					<ul class="cheat-list">
+						<li><span class="cheat-term">Gradients</span><span class="cheat-desc">Linear and radial gradients for backgrounds and hover states (<code>linear-gradient(...)</code>, <code>radial-gradient(...)</code>).</span></li>
+						<li><span class="cheat-term">3D / elevation</span><span class="cheat-desc">Use layered shadows and subtle transforms (<code>box-shadow</code>, <code>transform: translateY()</code>).</span></li>
+						<li><span class="cheat-term">Frosted look</span><span class="cheat-desc">Use <code>backdrop-filter: blur(..) saturate(..)</code> on cards for depth.</span></li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Interaction &amp; accessibility</h2>
+					<ul>
+						<li><code>:hover</code>, <code>:active</code>, <code>:focus</code> and <code>:focus-visible</code> for keyboard focus outlines.</li>
+						<li><code>:focus-within</code> used to style parent when child is focused.</li>
+						<li><code>:has()</code> used (progressive enhancement) to apply stronger effects when children are hovered/focused.</li>
+						<li>Use of ARIA in markup alongside CSS for accessible status overlays.</li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Pseudo elements &amp; helpers</h2>
+					<ul>
+						<li><code>::before</code> and <code>::after</code> used for decorative thumbnails and inner rims (e.g., <code>.resume::before</code>, <code>#board::after</code>).</li>
+						<li>Inset shadows (<code>inset</code>) to create grooves / rim highlights inside circular cells.</li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Small examples</h2>
+					<h3>List item hover (lift + gradient)</h3>
+					<pre><code>.list ul li:hover {
+	background: linear-gradient(90deg, rgba(var(--accent-rgb),0.88), rgba(109,13,109,0.88));
+	transform: translateY(-6px);
+	box-shadow: 0 18px 36px rgba(var(--accent-rgb),0.22);
+}</code></pre>
+
+					<h3>Disc styling (glossy)</h3>
+					<pre><code>.disc.p1 {
+	background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), var(--p1-color));
+	box-shadow: 0 12px 28px rgba(0,0,0,0.28), inset 0 4px 12px rgba(255,255,255,0.06);
+}
+</code></pre>
+
+					<h3>Responsive clamp</h3>
+					<pre><code>font-size: clamp(14px, 0.9vw + 12px, 18px);</code></pre>
+				</section>
+			</section>
+		</div>
+
+	</main>
+
+	<script src="Script.JS"></script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>JavaScript Cheatsheet — Project</title>
+	<link rel="stylesheet" href="Style.CSS">
+</head>
+<body>
+	<main class="resume" aria-labelledby="resume-heading">
+
+		<header class="resume-header">
+			<div class="name-block">
+				<h1 id="resume-heading" class="name">JavaScript Cheat Sheet</h1>
+				<p class="title">Quick reference — core concepts &amp; patterns</p>
+			</div>
+		</header>
+
+		<div class="resume-body">
+			<aside class="sidebar" aria-label="Cheat navigation and requirements">
+				<section class="section-card">
+					<h2 class="section-title">Cheat Navigation</h2>
+					<nav class="cheat-nav">
+						<a href="index.html">Home</a>
+						<a href="HTML Cheatsheet.html">HTML Cheat Sheet</a>
+						<a href="CSS Cheatsheet.html">CSS Cheat Sheet</a>
+						<span class="cheat-current" aria-current="page">JavaScript Cheat Sheet</span>
+					</nav>
+				</section>
+			</aside>
+
+			<section class="content">
+				<section class="section-card">
+					<h2 class="section-title">Core JavaScript concepts (15+)</h2>
+					<ul class="cheat-list">
+						<li><span class="cheat-term">Variables</span><span class="cheat-desc">(<code>let</code>, <code>const</code>, <code>var</code>): prefer <code>let</code>/<code>const</code>. Example: <code>const x = 3;</code>.</span></li>
+						<li><span class="cheat-term">Data types</span><span class="cheat-desc"><code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>object</code>.</span></li>
+						<li><span class="cheat-term">Functions &amp; declarations</span><span class="cheat-desc">declarations vs arrow functions; arrows don't bind their own <code>this</code>.</span></li>
+						<li><span class="cheat-term">Scope &amp; hoisting</span><span class="cheat-desc"><code>var</code> hoists; <code>let</code>/<code>const</code> are block-scoped.</span></li>
+						<li><span class="cheat-term">Closures</span><span class="cheat-desc">functions that remember outer scope variables (useful for private state).</span></li>
+						<li><span class="cheat-term">Objects &amp; prototypes</span><span class="cheat-desc">object literals and prototype-based inheritance patterns.</span></li>
+						<li><span class="cheat-term">Arrays &amp; methods</span><span class="cheat-desc"><code>map</code>, <code>filter</code>, <code>reduce</code>, <code>forEach</code> (e.g., <code>[1,2,3].map(n =&gt; n*2)</code>).</span></li>
+						<li><span class="cheat-term">Async &amp; Promises</span><span class="cheat-desc"><code>fetch(url).then(r =&gt; r.json())</code>.</span></li>
+						<li><span class="cheat-term">Async/Await</span><span class="cheat-desc">cleaner async code inside <code>async</code> functions (<code>const res = await fetch(url)</code>).</span></li>
+						<li><span class="cheat-term">Fetch API</span><span class="cheat-desc">browser network requests (<code>fetch('/api').then(res =&gt; res.json())</code>).</span></li>
+						<li><strong>DOM</strong>: selection &amp; manipulation via <code>document.querySelector</code>, <code>createElement</code>, <code>appendChild</code>.</li>
+						<li><strong>Events</strong>: <code>el.addEventListener('click', handler)</code>; use <code>event.preventDefault()</code> for forms.</li>
+						<li><strong>Higher-order functions</strong>: functions that accept or return functions (e.g., <code>map</code>).</li>
+						<li><strong>Error handling</strong>: <code>try/catch</code> around async/await or sync code.</li>
+						<li><strong>Modules</strong>: <code>import</code>/<code>export</code> for organization (e.g., <code>import {x} from './x.js'</code>).</li>
+						<li><strong>Helpers</strong>: <code>JSON.parse/stringify</code>, <code>Object.keys</code>, <code>Array.from</code>, <code>setTimeout</code>.</li>
+					</ul>
+				</section>
+
+				<section class="section-card">
+					<h2 class="section-title">Learning notes &amp; links</h2>
+					<ul>
+						<li>MDN JavaScript docs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></li>
+					</ul>
+				</section>
+			</section>
+		</div>
+
+	</main>
+
+	<script src="Script.JS"></script>
+</body>
+</html>
